@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* LIGHT MODE */
+    --bg-app: #F6F4EF;
+    --bg-surface: #FFFCF8;
+    --bg-hover: #EFECE6;
+    --bg-muted: #F6F4EF;
+    --bg-input: #F6F4EF;
+    --text-primary: #111111;
+    --text-secondary: #6D6A67;
+    --accent: #A67C52;
+    --secondary-accent: #5E6C5B;
+    --border-color: #DDD5CA;
+    --border-subtle: rgba(221, 213, 202, 0.6);
+    --btn-primary-bg: #111111;
+    --btn-primary-text: #FFFCF8;
+    --btn-primary-hover: #262626;
+    --success: #4E7A60;
+    --error: #A35B5B;
+    --shadow-color: rgba(17, 17, 17, 0.05);
+    --shadow-lg-color: rgba(17, 17, 17, 0.08);
+  }
+
+  html.dark {
+    /* DARK MODE */
+    --bg-app: #0F1110;
+    --bg-surface: #181A18;
+    --bg-hover: #222523;
+    --bg-muted: #131513;
+    --bg-input: #131513;
+    --text-primary: #F5F3EE;
+    --text-secondary: #B5B2AC;
+    --accent: #B89163;
+    --secondary-accent: #75856F;
+    --border-color: #2A2C2B;
+    --border-subtle: rgba(42, 44, 43, 0.6);
+    --btn-primary-bg: #181A18;
+    --btn-primary-text: #F5F3EE;
+    --btn-primary-hover: #222523;
+    --success: #5E8A70;
+    --error: #C26B6B;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-lg-color: rgba(0, 0, 0, 0.45);
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono, .font-numbers, code, pre, kbd {
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom Design System Helpers mapping to CSS variables */
+.bg-app-bg { background-color: var(--bg-app); }
+.bg-app-surface { background-color: var(--bg-surface); }
+.bg-app-hover { background-color: var(--bg-hover); }
+.bg-app-muted { background-color: var(--bg-muted); }
+
+.border-app-border { border-color: var(--border-color); }
+
+.text-app-primary { color: var(--text-primary); }
+.text-app-secondary { color: var(--text-secondary); }
+.text-app-accent { color: var(--accent); }
+.text-app-sec-accent { color: var(--secondary-accent); }
+.text-app-success { color: var(--success); }
+.text-app-error { color: var(--error); }
+
+.bg-app-primary { background-color: var(--btn-primary-bg); color: var(--btn-primary-text); }
+.bg-app-secondary { background-color: var(--secondary-accent); color: var(--bg-surface); }
+.bg-app-accent { background-color: var(--accent); color: var(--bg-surface); }
+.bg-app-success { background-color: var(--success); }
+.bg-app-error { background-color: var(--error); }
+
+/* Subtle Craft Shadows using variables */
+.shadow-craft {
+  box-shadow: 0 2px 12px -2px var(--shadow-color), 0 1px 3px -1px var(--shadow-color);
+}
+
+.shadow-craft-lg {
+  box-shadow: 0 12px 32px -8px var(--shadow-lg-color), 0 4px 12px -4px var(--shadow-color);
+}
+
+/* Soft Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}

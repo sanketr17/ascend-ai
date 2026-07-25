@@ -1,0 +1,6 @@
+{
+  "name": "ASCEND AI",
+  "description": "Adaptive Learning Intelligence Platform for interviews, skill evaluation, and AI career coaching.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
